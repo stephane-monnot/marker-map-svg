@@ -15,7 +15,7 @@ https://marker.nanoka.fr/map_pin-FFF-000-000-5-40.svg
 Need ```AllowOverride All``` in the vhost config file.
 
 ## For Nginx : 
-Add a ewrite rule in your vhost config file:
+Add a rewrite rule in your vhost config file:
 ```
 rewrite map_pin-([\w]+)-([\w]+)-([\w]+)-([\w]+)-([0-9]+).svg$ /index.php?backgroundColor=$1&fontColor=$2&borderColor=$3&text=$4&fontSize=$5 break;
 ```
