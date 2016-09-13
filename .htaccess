@@ -1,3 +1,4 @@
 RewriteEngine On
 
-RewriteRule map_pin-([\w]+)-([\w]+)-([\w]+)-([\w]+)-([0-9]+).svg$ index.php?backgroundColor=$1&fontColor=$2&borderColor=$3&text=$4&fontSize=$5 [L]
+RewriteRule map_pin-([\w]+)-([\w]+)-([\w]+)-([\w]+)-([0-9]+).svg$ index.php?type=marker&backgroundColor=$1&fontColor=$2&borderColor=$3&text=$4&fontSize=$5 [L]
+RewriteRule map_cluster-([\w]+)-([0-9]+).svg$ index.php?type=cluster&backgroundColor=$1&size=$2 [L]
